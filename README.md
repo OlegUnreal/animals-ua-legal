@@ -3,7 +3,8 @@
 This folder contains static pages for TikTok Developer app review:
 
 - `terms.html`
-- `privacy.html`
+- `privacy/`
+- `tiktok/callback/`
 
 Publish this folder with GitHub Pages, Google Sites, Netlify, Cloudflare Pages, or another HTTPS host.
 
@@ -11,5 +12,6 @@ Use the public URLs in TikTok Developer Portal:
 
 ```text
 Terms of Service URL: https://your-domain.example/terms.html
-Privacy Policy URL: https://your-domain.example/privacy.html
+Privacy Policy URL: https://your-domain.example/privacy/
+Redirect URI: https://your-domain.example/tiktok/callback/
 ```
