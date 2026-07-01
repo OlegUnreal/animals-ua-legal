@@ -4,55 +4,252 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Animals UA</title>
+  <link rel="icon" type="image/png" href="animals-ua-favicon.png">
   <style>
+    :root {
+      --ink: #14202b;
+      --muted: #52606d;
+      --teal: #087f7a;
+      --soft: #eef7f4;
+      --line: #d7e2df;
+      --paper: #ffffff;
+      --coral: #ff6f61;
+    }
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      color: #1f2933;
+      color: var(--ink);
       background: #f7f7f4;
       line-height: 1.6;
     }
+    header {
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar,
     main {
-      max-width: 760px;
+      max-width: 1040px;
       margin: 0 auto;
-      padding: 56px 24px;
+      padding: 0 24px;
     }
-    h1 {
-      font-size: 40px;
-      line-height: 1.1;
-      margin: 0 0 16px;
+    .topbar {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
     }
-    p {
-      font-size: 18px;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 24px;
+    }
+    .brand img {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
     }
     nav {
       display: flex;
-      gap: 16px;
-      margin-top: 32px;
+      gap: 18px;
       flex-wrap: wrap;
     }
     a {
-      color: #0f766e;
+      color: var(--teal);
       font-weight: 700;
+    }
+    nav a {
+      color: var(--ink);
+      text-decoration: none;
+    }
+    main {
+      padding-top: 56px;
+      padding-bottom: 64px;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
+      gap: 36px;
+      align-items: center;
+      margin-bottom: 48px;
+    }
+    h1 {
+      font-size: 48px;
+      line-height: 1.08;
+      margin: 0 0 16px;
+    }
+    h2 {
+      font-size: 26px;
+      margin: 0 0 14px;
+    }
+    p,
+    li {
+      font-size: 17px;
+    }
+    .lead {
+      font-size: 20px;
+      color: var(--muted);
+      max-width: 680px;
+    }
+    .icon-panel {
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 28px;
+      text-align: center;
+    }
+    .icon-panel img {
+      width: min(260px, 100%);
+      height: auto;
+      border-radius: 28px;
+      display: block;
+      margin: 0 auto 18px;
+    }
+    .section {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 28px;
+      margin-top: 22px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .item {
+      background: var(--soft);
+      border-radius: 8px;
+      padding: 20px;
+    }
+    .item h3 {
+      margin: 0 0 8px;
+      font-size: 19px;
+    }
+    .item p {
+      margin: 0;
+      color: var(--muted);
+    }
+    .note {
+      color: var(--muted);
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      background: var(--paper);
+      color: var(--muted);
+    }
+    footer .topbar {
+      min-height: auto;
+      padding-top: 22px;
+      padding-bottom: 22px;
+    }
+    @media (max-width: 760px) {
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+        padding-top: 18px;
+        padding-bottom: 18px;
+      }
+      .hero,
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      h1 {
+        font-size: 38px;
+      }
     }
   </style>
 </head>
 <body>
+  <header>
+    <div class="topbar">
+      <a class="brand" href="./" aria-label="Animals UA home">
+        <img src="animals-ua-tiktok-icon-1024.png" alt="Animals UA app icon">
+        <span>Animals UA</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="./">Home</a>
+        <a href="privacy/">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </nav>
+    </div>
+  </header>
+
   <main>
-    <h1>Animals UA</h1>
-    <p>
-      Animals UA is a small creator project that shares short animal videos,
-      including videos of rescued animals and animals living in shelters or
-      rescue centers.
-    </p>
-    <p>
-      This site provides the legal pages required for app integrations used to
-      prepare and publish short-form animal videos.
-    </p>
-    <nav>
-      <a href="terms.html">Terms of Service</a>
-      <a href="privacy/">Privacy Policy</a>
-    </nav>
+    <section class="hero">
+      <div>
+        <h1>Animals UA</h1>
+        <p class="lead">
+          Animals UA is a live creator publishing service for short videos
+          about animals, nature, rescue stories, and travel moments.
+        </p>
+        <p>
+          The service helps prepare short-form video posts, organize publishing
+          metadata, and share authorized videos with connected social media
+          accounts. It is used for ongoing public content publishing, not as a
+          test page, login screen, or placeholder site.
+        </p>
+      </div>
+      <div class="icon-panel">
+        <img src="animals-ua-tiktok-icon-1024.png" alt="Animals UA app icon">
+        <strong>Official Animals UA app icon</strong>
+        <p class="note">Used for the Animals UA publishing workflow.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>What Animals UA Does</h2>
+      <div class="grid">
+        <div class="item">
+          <h3>Video Preparation</h3>
+          <p>Organizes selected videos and prepares them for short-form social platforms.</p>
+        </div>
+        <div class="item">
+          <h3>Publishing Metadata</h3>
+          <p>Supports titles, descriptions, hashtags, and content details for public posts.</p>
+        </div>
+        <div class="item">
+          <h3>Authorized Uploads</h3>
+          <p>Uploads reviewed videos only to connected accounts that the owner authorizes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Content Focus</h2>
+      <p>
+        Animals UA focuses on animal clips, rescue and shelter-related stories,
+        calm nature scenes, and travel footage. Posts are reviewed before
+        publication so titles, captions, and hashtags match the video content.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Legal and Privacy Information</h2>
+      <p>
+        The public Privacy Policy and Terms of Service explain how Animals UA
+        handles account authorization, local files, uploaded videos, and
+        third-party integrations.
+      </p>
+      <p>
+        <a href="privacy/">Read Animals UA Privacy Policy</a><br>
+        <a href="terms.html">Read Animals UA Terms of Service</a>
+      </p>
+    </section>
   </main>
+
+  <footer>
+    <div class="topbar">
+      <span>Animals UA</span>
+      <span>Last updated: July 1, 2026</span>
+    </div>
+  </footer>
 </body>
 </html>
